@@ -48,7 +48,8 @@ private static int wlLimit;
     	// that means Until you give berth in UPPER,LOWER,MIDDLE if you give upper,lower,middle it prints invalid 
     	//ennum comes out of  an loop
         try {
-          System.out.println("Enter your Pref berth"+Arrays.toString(Berth.values())); // System.out.println(Berth.values());
+          System.out.println("Enter your Pref berth"+Arrays.toString(Berth.values())); 
+          // System.out.println(Berth.values());
       //[LBerth;@7a81197d] so use arrays.tostring
 
           String prefberth = s.nextLine();
@@ -62,7 +63,7 @@ private static int wlLimit;
       passenger p= new passenger();
       p.setPid(pid);
       p.setPassengerName(pname);
-      p.setPrefberth(berth);   // name preferberth  oru  ah id set
+      p.setPrefberth(berth);    // name preferberth  oru  ah id set
       bookTicket(p);           //adhuku book ticket method create pnrom last ah 150 th line la
       pid++;
       break;
@@ -76,22 +77,31 @@ private static int wlLimit;
       System.out.println("Waiting List passengers" +wlPassengers);
       System.out.println("Booked List passengers" +bkdPassengers);
       break;
-    case 4:	
-            System.out.println("Enter your Pid");
-        int Wlchecked = s.nextInt();
+    case 4:
+        System.out.println("Enter your Pid");
+        int Wlchecked = s.nextInt();  // Reads the input Pid from the user.
+
+        // Creates a stream from the wlPassengers list.
+        // 'stream' means a sequence/flow of elements from the list to perform operations like filtering, mapping, etc.
         List<passenger> isWlpass = wlPassengers.stream()
-            .filter(e -> e.getPid() == Wlchecked)
-            .collect(Collectors.toList());
+            .filter(e -> e.getPid() == Wlchecked)  // Filters passengers whose Pid matches the entered value.
+            .collect(Collectors.toList());         // Collects the result into a new list.
 
         if (isWlpass != null && !isWlpass.isEmpty()) {
-          //  System.out.println("Passenger name: " + isWlpass.get(0).getPassengerName());
+            // Passenger found in WL list, show their booked and current WL limits.
             System.out.println("Booked WL limit: " + isWlpass.get(0).getBKdwlimit());
             System.out.println("Current WL limit: " + isWlpass.get(0).getCurrentwlLimi());
         } else {
-            wlPassengers.forEach(e -> e.setCurrentwlLimit(wlLimit));// for each array la ulla ella
-            // elemants uhm oru varaible either "e" or any other store aagum )
+            // Passenger not found: Update all current WL limits using forEach loop.
+            // For each passenger in the wlPassengers list, update their current WL limit.
+            wlPassengers.forEach(e -> e.setCurrentwlLimit(wlLimit));  //  e is a temporary variable name for each passenger in the list.
+            //> means: "do this action for each e".
+            //for each purpose :"Go through each waiting list 
+          //  passenger and update their current WL limit with the value in wlLimit."
+
             System.out.println("Your ID is not in WL");
         }
+
         break;
         default:
       System.out.println("Invalid option");

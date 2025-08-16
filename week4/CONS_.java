@@ -18,6 +18,8 @@ class manager extends employee{
 	
 }
 public class  CONS_{
+	//Access_Modifiers a=new Acess_Modifiers();
+	
 	public static void main(String[]args) {
 		manager m1=new manager("nivi","HR");
 	

@@ -1,6 +1,6 @@
 package week3;
 import week3 .Access_Modifiers;
-public class Constructor_using_array  {
+public class Constructor_using_array extends Access_Modifiers  {
      String name;
      public Constructor_using_array(String S) {
         name = S;
@@ -14,7 +14,7 @@ public class Constructor_using_array  {
       //  a5.setdata(67);
        // System.out.println(a5.getdata());
       //  System.out.println(a5.pr);
-        a5.
+
         
     } 
 }

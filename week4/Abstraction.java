@@ -1,7 +1,7 @@
 package week4;
 
  class Shape {
-   void Calculatearea() {
+   void Calculatearea() { //abstractmethod
 	  
         System.out.println("Calculating area...");
     }

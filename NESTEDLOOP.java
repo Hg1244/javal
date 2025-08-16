@@ -1,6 +1,9 @@
 
 public class NESTEDLOOP{
     public static void main(String[] args) {
+    	
+    
+    	
         int rows = 5;
         int spaces = rows * 2 - 1 - 1;  // or: spaces = rows - 1;
         int stars = 1;

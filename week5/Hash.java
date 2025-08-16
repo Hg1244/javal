@@ -11,6 +11,7 @@ public class Hash {
         a.add(3);
         a.add(1); // Duplicate, ignored
         a.add(4);
+        
         a.add(5);
 
         System.out.println("Enter a:");
@@ -18,6 +19,9 @@ public class Hash {
 
         System.out.println("Enter contains:");
         System.out.println("Contains 3? " + a.contains(3));
+        
+        
+        
 
         System.out.println("Enter getClass:");
         System.out.println(a.getClass());

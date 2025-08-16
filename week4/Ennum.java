@@ -6,8 +6,6 @@ enum subjects{
 	BOTANY,
 	MATHS,
 }
-
-
 public class Ennum {
 
 	public static void main(String[] args) {

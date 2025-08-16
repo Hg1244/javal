@@ -16,6 +16,7 @@ public class Linkedlist {
 		System.out.println(a);
 		
 		
+		
 		//a.get(1);
 //		a.removeFirst();
 //		System.out.println(a);

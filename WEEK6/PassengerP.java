@@ -1,13 +1,14 @@
 package WEEK6;
 
 import java.time.LocalDateTime;
+
 enum Berth{
 	UPPER,
 	LOWER,
 	MIDDLE;
 }
 
-public class passenger {
+public class PassengerP {
 	private int pid;
 	private String passengerName;
 	private Berth prefberth;
@@ -15,7 +16,6 @@ public class passenger {
 	private LocalDateTime bkdt;
 	private int bkdWlLimit;
 	private int currentlimit;
-	
 	public int getCurrentlimit() {
 		 return currentlimit;
 	}

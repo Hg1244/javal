@@ -30,7 +30,8 @@ public class Collections {
 			//REMOVE INDEX
 		a.remove(1);//----->remove the index
 		System.out.println(a);
-			
+		
+		
 		LinkedList<Integer> a1 = new LinkedList<>();//---> Linked list
 	    a1.addAll(a);
 	    a.remove(0);//--->removve the number from index 0
@@ -60,7 +61,7 @@ public class Collections {
 	                                          //     — once for every element in the list.
 	    }
 	    	Iterator<Integer>it=a1.iterator();
-	    	while(it.hasNext()) {
+	    	while(it.hasNext()) {      // n
 	    		int num=it.next();
 	    		if(num==21) {
 	    			it.remove();
